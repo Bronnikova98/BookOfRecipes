@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 
+
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationView);
         toolbar = findViewById(R.id.toolbar);
 
-        // Шаг 1
-        setSupportActionBar(toolbar);
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout,toolbar, R.string.OpenDrawer, R.string.CloseDrawer);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.OpenDrawer, R.string.CloseDrawer);
         drawerLayout.addDrawerListener(toggle);
 
         toggle.syncState();
@@ -45,12 +47,13 @@ public class MainActivity extends AppCompatActivity {
 
                 int id = item.getItemId();
 
-                if (id==R.id.recapt){
+                if (id == R.id.recapt) {
 
-                    loadFragment(new AFragment());
+                    loadFragmentA(new AFragment());
 
-                }else if (id==R.id.recapt){
+                } else if (id == R.id.save_recapt) {
 
+                    loadFragmentB(new BFragment());
                 }
 
                 drawerLayout.closeDrawer(GravityCompat.START);
@@ -65,16 +68,26 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else {
+        } else {
             super.onBackPressed();
         }
     }
 
-    private void loadFragment(AFragment fragment) {
+    private void loadFragmentA(AFragment fragment) {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
         ft.add(R.id.container, fragment);
         ft.commit();
     }
+
+    private void loadFragmentB(BFragment fragment) {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
+        ft.replace(R.id.container, fragment);
+        ft.commit();
+    }
+
+
 }

@@ -22,13 +22,11 @@ public class AFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a, container, false);
         Button dumplings = (Button) view.findViewById(R.id.button_dumplings);
-
 
         dumplings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,13 +35,11 @@ public class AFragment extends Fragment {
                 FragmentManager fm = getActivity().getSupportFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
 
-                ft.add(R.id.container, firstFragment);
+                ft.replace(R.id.container, firstFragment);
                 ft.commit();
 
             }
         });
-
-
         return view;
     }
 

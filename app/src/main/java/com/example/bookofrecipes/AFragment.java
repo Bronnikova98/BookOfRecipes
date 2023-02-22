@@ -51,7 +51,12 @@ public class AFragment extends Fragment {
         pancakes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                ThreeFragment threeFragment = new ThreeFragment();
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+
+                ft.replace(R.id.container, threeFragment);
+                ft.commit();
             }
         });
 

@@ -4,12 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".FirstFragment"
+    tools:context=".ThreeFragment">
 
-    >
-
-
+    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,50 +14,50 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/headerDumplings"
+                android:id="@+id/headerBliny"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Пельмени"
+                android:text="Блины"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/imageView3"
                     android:layout_width="300dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/dumplings" />
+                    android:src="@drawable/bliny" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textView35"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
-                    android:text="Чтобы приготовить пельмени следуйте шагам ниже! Удачи!"
+                    android:text="Чтобы приготовить блины на молоке следуйте шагам ниже! Удачи!"
                     android:textColor="#000000" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView36"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -71,132 +68,175 @@
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textView37"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Вода 2 л."
+                android:text="Молоко 1 стакан"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textView38"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Пельмени 300 гр."
+                android:text="Вода 1 стакан"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textView39"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Соль 1/2 ч.л."
+                android:text="Дрожжи сухие 6 гр."
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/textView40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#EAF5F6"
+                android:text="Масло растительное 3 ст.л."
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#EAF5F6"
+                android:text="Яйца 2 шт."
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#EAF5F6"
+                android:text="Мука 250 гр."
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#EAF5F6"
+                android:text="Соль 1 щепотка"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#EAF5F6"
+                android:text="Сахар 2 ст. ложки"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView45"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 1. Поставьте воду на огонь, доведите её до кипения"
+                android:text="Шаг 1. Молоко с водой погреть до теплого. Перелить в миску, добавить яйца и дрожжи, перемешать"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/textView46"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 2. Посолите воду"
+                android:text="Шаг 2. Добавить сахар и соль, тщательно перемешать"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/textView47"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 3. Опустите пельмени в кипящую воду. Помешивая, варите 8 мин."
+                android:text="Шаг 3, Добавить муку, протерев её через сито. Перемешать. Влить масло. Еще раз перемешать. Накрыть миску и убрать в теплое место на 60 мин "
                 android:textColor="#000000" />
 
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_height="match_parent">
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="2">
+                    android:layout_height="match_parent" >
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/textView48"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="08:00"
+                        android:text="60:00"
                         android:textColor="#4CAF50"
                         android:textSize="24sp" />
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/button_start"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
                         android:backgroundTint="#4CAF50"
                         android:text="Начать" />
-
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="2">
+                    android:layout_height="match_parent" >
 
                     <EditText
-                        android:id="@+id/myTime"
+                        android:id="@+id/textView49"
                         android:layout_width="wrap_content"
-
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="5dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:minHeight="48dp"
                         android:text="00:00"
                         android:textColor="#000000"
                         android:textSize="24sp" />
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/button12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
                         android:backgroundTint="#A1D7DD"
                         android:text="Сброс" />
-
                 </TableRow>
 
             </TableLayout>
 
             <TextView
-                android:id="@+id/exeText"
+                android:id="@+id/exetextView50"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -206,17 +246,17 @@
                 android:visibility="invisible" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/textView51"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 4. Достаньте пельмени из воды и поместите на тарелку. Приятного аппетита!"
+                android:text="Шаг 4. Приступаем к жарке. Раскаленную сковороду смазываем растительным маслом и наливаем тесто, распределяем его по сковороде. Как только края подрумянятся, переворачиваем блин и дожариваем другую сторону. Готовый блин выкладываем на тарелку, можно смазать сливочным маслом. Приятного аппетита! "
                 android:textColor="#000000" />
 
             <Button
-                android:id="@+id/back"
+                android:id="@+id/button13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -224,7 +264,6 @@
                 android:layout_marginRight="20dp"
                 android:backgroundTint="#00BCD4"
                 android:text="Вернуться к списку рецептов" />
-
         </LinearLayout>
     </ScrollView>
 

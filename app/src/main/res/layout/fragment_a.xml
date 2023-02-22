@@ -45,7 +45,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#00BCD4"
-                android:text="Борщ" />
+                android:text="Борщ"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/button_pancakes"
@@ -54,7 +55,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#00BCD4"
-                android:text="Блины на молоке" />
+                android:text="Блины на молоке"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </ScrollView>
 

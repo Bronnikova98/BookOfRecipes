@@ -1,22 +1,11 @@
 package com.example.bookofrecipes;
 
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.os.Build;
 import android.os.Bundle;
-
-import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.os.CountDownTimer;
-import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -31,15 +20,9 @@ public class FirstFragment extends Fragment {
 
     private MyTimer timer;
 
-    private static final int NOTIFY_ID = 100;
-    private Handler handler;
-
-
     public FirstFragment() {
         // Required empty public constructor
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,8 +35,6 @@ public class FirstFragment extends Fragment {
         TextView timerView = (TextView) view.findViewById(R.id.textView8);
         EditText myTimeText = (EditText) view.findViewById(R.id.myTime);
         TextView exceptionText = (TextView) view.findViewById(R.id.exeText);
-
-
 
         // Кнопка вернуться назад к списку рецептов
         backMain.setOnClickListener(new View.OnClickListener() {
@@ -91,14 +72,12 @@ public class FirstFragment extends Fragment {
              }
          });
 
-
         // Кнопка остановить таймер и сбросить на заданное время
         reset. setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 start.setText("Начать");
                 start.getBackground().setColorFilter(Color.parseColor("#4CAF50"), PorterDuff.Mode.MULTIPLY);
-                //timerView.setText("00:00");
                 timerView.setTextColor(Color.parseColor("#4CAF50"));
                 if (timer != null){
                     timer.cancel();}
@@ -109,7 +88,7 @@ public class FirstFragment extends Fragment {
         });
 
 
-
+        // При изменении текста
         myTimeText.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -133,12 +112,8 @@ public class FirstFragment extends Fragment {
 
         });
 
-
-
         // Inflate the layout for this fragment
         return view;
     }
-
-
 
 }

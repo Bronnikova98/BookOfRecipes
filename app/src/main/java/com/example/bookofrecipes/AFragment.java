@@ -1,20 +1,13 @@
 package com.example.bookofrecipes;
 
-import android.content.Context;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
 
 public class AFragment extends Fragment {
 
@@ -27,6 +20,8 @@ public class AFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a, container, false);
         Button dumplings = (Button) view.findViewById(R.id.button_dumplings);
+        Button borsch = (Button) view.findViewById(R.id.button_borsch);
+        Button pancakes = (Button) view.findViewById(R.id.button_pancakes);
 
         dumplings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +35,26 @@ public class AFragment extends Fragment {
 
             }
         });
+
+        borsch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TwoFragment twoFragment = new TwoFragment();
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+
+                ft.replace(R.id.container, twoFragment);
+                ft.commit();
+            }
+        });
+
+        pancakes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        });
+
         return view;
     }
 

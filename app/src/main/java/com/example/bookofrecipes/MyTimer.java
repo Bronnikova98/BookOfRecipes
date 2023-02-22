@@ -7,15 +7,12 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.core.app.NotificationCompat;
-import androidx.core.content.ContextCompat;
 
 public class MyTimer extends CountDownTimer {
 
@@ -66,7 +63,6 @@ public class MyTimer extends CountDownTimer {
         timerView.setTextColor(Color.parseColor("#873939"));
         start.setText("Готово!");
 
-
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -86,7 +82,6 @@ public class MyTimer extends CountDownTimer {
                 notificationManager.notify(NOTIFY_ID, builder.build());
             }
         }, 1000);
-
 
     }
 }

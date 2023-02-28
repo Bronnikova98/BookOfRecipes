@@ -7,15 +7,19 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
 
 public class MyTimer extends CountDownTimer {
-
+    private Vibrator vibrator;
+    private MediaPlayer player;
     private TextView timerView;
     private Button start;
     private static final int NOTIFY_ID = 100;
@@ -30,10 +34,12 @@ public class MyTimer extends CountDownTimer {
      * @param countDownInterval The interval along the way to receive
      *                          {@link #onTick(long)} callbacks.
      */
-    public MyTimer(long millisInFuture, long countDownInterval, Context context, TextView v, Button b) {
+    public MyTimer(long millisInFuture, long countDownInterval, Context context, TextView v, Button b, MediaPlayer m, Vibrator r) {
         super(millisInFuture, countDownInterval);
         timerView=v;
         start = b;
+        player = m;
+        vibrator = r;
 
         this.context = context;
 
@@ -45,6 +51,21 @@ public class MyTimer extends CountDownTimer {
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             notificationManager.createNotificationChannel(channel);
+        }
+
+        player = MediaPlayer.create(context, R.raw.kolokol);
+        if (player.isPlaying()){
+                     player.stop();
+                     player.release();
+                     player=MediaPlayer.create(context, R.raw.kolokol);
+                 }
+                 player.start();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            long[] pattern = {0, 400, 100, 0};
+            vibrator.vibrate(VibrationEffect.createWaveform(pattern, -1));
+        }else {
+            vibrator.vibrate(1000);
         }
     }
 

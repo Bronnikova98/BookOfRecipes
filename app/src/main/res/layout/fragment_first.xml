@@ -27,7 +27,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Пельмени"
+                android:text="@string/dumplings"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -55,7 +55,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
-                    android:text="Чтобы приготовить пельмени следуйте шагам ниже! Удачи!"
+                    android:text="@string/good_luck_dumplings"
                     android:textColor="#000000" />
             </LinearLayout>
 
@@ -67,7 +67,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#CDEBED"
-                android:text="Необходимые ингредиенты:"
+                android:text="@string/necessary_ingredients"
                 android:textColor="#000000" />
 
             <TextView
@@ -77,7 +77,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Вода 2 л."
+                android:text="@string/dumpling_ingredient_one"
                 android:textColor="#000000" />
 
             <TextView
@@ -87,7 +87,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Пельмени 300 гр."
+                android:text="@string/dumpling_ingredient_two"
                 android:textColor="#000000" />
 
             <TextView
@@ -97,7 +97,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Соль 1/2 ч.л."
+                android:text="@string/dumplings_ingredient_three"
                 android:textColor="#000000" />
 
             <TextView
@@ -107,7 +107,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 1. Поставьте воду на огонь, доведите её до кипения"
+                android:text="@string/step_one_dumplings"
                 android:textColor="#000000" />
 
             <TextView
@@ -117,7 +117,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 2. Посолите воду"
+                android:text="@string/step_two_dumplings"
                 android:textColor="#000000" />
 
             <TextView
@@ -127,7 +127,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 3. Опустите пельмени в кипящую воду. Помешивая, варите 8 мин."
+                android:text="@string/step_three_dumplings"
                 android:textColor="#000000" />
 
             <TableLayout
@@ -159,7 +159,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
                         android:backgroundTint="#4CAF50"
-                        android:text="Начать" />
+                        android:text="@string/begin_button" />
 
                 </TableRow>
 
@@ -189,7 +189,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
                         android:backgroundTint="#A1D7DD"
-                        android:text="Сброс" />
+                        android:text="@string/reset_button" />
 
                 </TableRow>
 
@@ -212,7 +212,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 4. Достаньте пельмени из воды и поместите на тарелку. Приятного аппетита!"
+                android:text="@string/step_four_dumplings"
                 android:textColor="#000000" />
 
             <Button
@@ -223,7 +223,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:backgroundTint="#00BCD4"
-                android:text="Вернуться к списку рецептов" />
+                android:text="@string/back_to_list_of_recipes" />
 
         </LinearLayout>
     </ScrollView>

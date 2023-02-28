@@ -1,5 +1,6 @@
 package com.example.bookofrecipes;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Vibrator;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -23,10 +25,7 @@ public class TwoFragment extends Fragment {
     private MyTimer timer2;
     private MyTimer timer3;
     private MyTimer timer4;
-    MediaPlayer player;
-    MediaPlayer player2;
-    MediaPlayer player3;
-    MediaPlayer player4;
+
 
     public TwoFragment() {
         // Required empty public constructor
@@ -59,10 +58,8 @@ public class TwoFragment extends Fragment {
         EditText myTimeText4 = (EditText) view.findViewById(R.id.textView32);
         TextView exceptionText4 = (TextView) view.findViewById(R.id.exetextView38);
 
-        player = MediaPlayer.create(getContext(),R.raw.kolokol);
-        player2 = MediaPlayer.create(getContext(),R.raw.kolokol);
-        player3 = MediaPlayer.create(getContext(),R.raw.kolokol);
-        player4 = MediaPlayer.create(getContext(),R.raw.kolokol);
+        MediaPlayer player = MediaPlayer.create(getContext(),R.raw.kolokol);
+        Vibrator vibrator=(Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
         // Кнопка вернуться назад к списку рецептов
         backMain.setOnClickListener(new View.OnClickListener() {
@@ -89,18 +86,13 @@ public class TwoFragment extends Fragment {
                     int min = Integer.parseInt(arr[0]);
                     int sec = Integer.parseInt(arr[1]);
                     long mils = (min * 60 + sec) * 1000;
-                    timer=new MyTimer(mils,1000,getContext(),timerView1, start1);
+                    timer=new MyTimer(mils,1000,getContext(),timerView1, start1,  player, vibrator);
                     timer.start();
                 }catch (NumberFormatException nfe){
                     exceptionText1.setVisibility(View.VISIBLE);
                 }
 
-                if (player.isPlaying()){
-                    player.stop();
-                    player.release();
-                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
-                player.start();
+
 
             }
         });
@@ -117,11 +109,7 @@ public class TwoFragment extends Fragment {
 
                 exceptionText1.setVisibility(View.INVISIBLE);
 
-                if (player.isPlaying()){
-                    player.stop();
-                    player.release();
-                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
+
             }
         });
 
@@ -161,18 +149,13 @@ public class TwoFragment extends Fragment {
                     int min = Integer.parseInt(arr[0]);
                     int sec = Integer.parseInt(arr[1]);
                     long mils = (min * 60 + sec) * 1000;
-                    timer2=new MyTimer(mils,1000,getContext(),timerView2, start2);
+                    timer2=new MyTimer(mils,1000,getContext(),timerView2, start2, player, vibrator);
                     timer2.start();
                 }catch (NumberFormatException nfe){
                     exceptionText2.setVisibility(View.VISIBLE);
                 }
 
-                if (player2.isPlaying()){
-                    player2.stop();
-                    player2.release();
-                    player2=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
-                player2.start();
+
             }
         });
 
@@ -188,11 +171,7 @@ public class TwoFragment extends Fragment {
 
                 exceptionText2.setVisibility(View.INVISIBLE);
 
-                if (player2.isPlaying()){
-                    player2.stop();
-                    player2.release();
-                    player2=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
+
 
             }
         });
@@ -232,18 +211,13 @@ public class TwoFragment extends Fragment {
                     int min = Integer.parseInt(arr[0]);
                     int sec = Integer.parseInt(arr[1]);
                     long mils = (min * 60 + sec) * 1000;
-                    timer3=new MyTimer(mils,1000,getContext(),timerView3, start3);
+                    timer3=new MyTimer(mils,1000,getContext(),timerView3, start3, player,vibrator);
                     timer3.start();
                 }catch (NumberFormatException nfe){
                     exceptionText3.setVisibility(View.VISIBLE);
                 }
 
-                if (player3.isPlaying()){
-                    player3.stop();
-                    player3.release();
-                    player3=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
-                player3.start();
+
             }
         });
 
@@ -259,11 +233,7 @@ public class TwoFragment extends Fragment {
 
                 exceptionText3.setVisibility(View.INVISIBLE);
 
-                if (player3.isPlaying()){
-                    player3.stop();
-                    player3.release();
-                    player3=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
+
             }
         });
 
@@ -302,18 +272,13 @@ public class TwoFragment extends Fragment {
                     int min = Integer.parseInt(arr[0]);
                     int sec = Integer.parseInt(arr[1]);
                     long mils = (min * 60 + sec) * 1000;
-                    timer4=new MyTimer(mils,1000,getContext(),timerView4, start4);
+                    timer4=new MyTimer(mils,1000,getContext(),timerView4, start4, player,vibrator);
                     timer4.start();
                 }catch (NumberFormatException nfe){
                     exceptionText4.setVisibility(View.VISIBLE);
                 }
 
-                if (player4.isPlaying()){
-                    player4.stop();
-                    player4.release();
-                    player4=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
-                player4.start();
+
             }
         });
 
@@ -329,11 +294,7 @@ public class TwoFragment extends Fragment {
 
                 exceptionText4.setVisibility(View.INVISIBLE);
 
-                if (player4.isPlaying()){
-                    player4.stop();
-                    player4.release();
-                    player4=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
+
             }
         });
 

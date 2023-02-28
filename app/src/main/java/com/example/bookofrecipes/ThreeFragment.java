@@ -1,5 +1,6 @@
 package com.example.bookofrecipes;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Vibrator;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -19,7 +21,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class ThreeFragment extends Fragment {
-    MediaPlayer player;
+
     private MyTimer timer;
 
     public ThreeFragment() {
@@ -39,7 +41,8 @@ public class ThreeFragment extends Fragment {
         EditText myTimeText1 = (EditText) view.findViewById(R.id.textView49);
         TextView exceptionText1 = (TextView) view.findViewById(R.id.exetextView50);
 
-        player = MediaPlayer.create(getContext(),R.raw.kolokol);
+        MediaPlayer player = MediaPlayer.create(getContext(),R.raw.kolokol);
+        Vibrator vibrator=(Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
         // Кнопка вернуться назад к списку рецептов
         backMain.setOnClickListener(new View.OnClickListener() {
@@ -66,18 +69,13 @@ public class ThreeFragment extends Fragment {
                     int min = Integer.parseInt(arr[0]);
                     int sec = Integer.parseInt(arr[1]);
                     long mils = (min * 60 + sec) * 1000;
-                    timer=new MyTimer(mils,1000,getContext(),timerView1, start);
+                    timer=new MyTimer(mils,1000,getContext(),timerView1, start, player, vibrator);
                     timer.start();
                 }catch (NumberFormatException nfe){
                     exceptionText1.setVisibility(View.VISIBLE);
                 }
 
-                if (player.isPlaying()){
-                    player.stop();
-                    player.release();
-                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
-                player.start();
+
             }
         });
 
@@ -93,11 +91,7 @@ public class ThreeFragment extends Fragment {
 
                 exceptionText1.setVisibility(View.INVISIBLE);
 
-                if (player.isPlaying()){
-                    player.stop();
-                    player.release();
-                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
-                }
+
             }
         });
 

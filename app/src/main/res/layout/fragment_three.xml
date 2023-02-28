@@ -24,7 +24,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="Блины"
+                android:text="@string/pancakes_with_milk"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -64,7 +64,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#CDEBED"
-                android:text="Необходимые ингредиенты:"
+                android:text="@string/necessary_ingredients"
                 android:textColor="#000000" />
 
             <TextView
@@ -204,7 +204,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
                         android:backgroundTint="#4CAF50"
-                        android:text="Начать" />
+                        android:text="@string/begin_button" />
                 </TableRow>
 
                 <TableRow
@@ -230,7 +230,7 @@
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
                         android:backgroundTint="#A1D7DD"
-                        android:text="Сброс" />
+                        android:text="@string/reset_button" />
                 </TableRow>
 
             </TableLayout>
@@ -263,7 +263,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:backgroundTint="#00BCD4"
-                android:text="Вернуться к списку рецептов" />
+                android:text="@string/back_to_list_of_recipes" />
         </LinearLayout>
     </ScrollView>
 

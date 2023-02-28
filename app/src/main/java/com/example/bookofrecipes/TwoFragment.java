@@ -2,6 +2,7 @@ package com.example.bookofrecipes;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -22,6 +23,10 @@ public class TwoFragment extends Fragment {
     private MyTimer timer2;
     private MyTimer timer3;
     private MyTimer timer4;
+    MediaPlayer player;
+    MediaPlayer player2;
+    MediaPlayer player3;
+    MediaPlayer player4;
 
     public TwoFragment() {
         // Required empty public constructor
@@ -54,6 +59,11 @@ public class TwoFragment extends Fragment {
         EditText myTimeText4 = (EditText) view.findViewById(R.id.textView32);
         TextView exceptionText4 = (TextView) view.findViewById(R.id.exetextView38);
 
+        player = MediaPlayer.create(getContext(),R.raw.kolokol);
+        player2 = MediaPlayer.create(getContext(),R.raw.kolokol);
+        player3 = MediaPlayer.create(getContext(),R.raw.kolokol);
+        player4 = MediaPlayer.create(getContext(),R.raw.kolokol);
+
         // Кнопка вернуться назад к списку рецептов
         backMain.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +95,13 @@ public class TwoFragment extends Fragment {
                     exceptionText1.setVisibility(View.VISIBLE);
                 }
 
+                if (player.isPlaying()){
+                    player.stop();
+                    player.release();
+                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
+                player.start();
+
             }
         });
 
@@ -99,6 +116,12 @@ public class TwoFragment extends Fragment {
                 timerView1.setText("30:00");
 
                 exceptionText1.setVisibility(View.INVISIBLE);
+
+                if (player.isPlaying()){
+                    player.stop();
+                    player.release();
+                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
             }
         });
 
@@ -143,6 +166,13 @@ public class TwoFragment extends Fragment {
                 }catch (NumberFormatException nfe){
                     exceptionText2.setVisibility(View.VISIBLE);
                 }
+
+                if (player2.isPlaying()){
+                    player2.stop();
+                    player2.release();
+                    player2=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
+                player2.start();
             }
         });
 
@@ -157,6 +187,12 @@ public class TwoFragment extends Fragment {
                 timerView2.setText("10:00");
 
                 exceptionText2.setVisibility(View.INVISIBLE);
+
+                if (player2.isPlaying()){
+                    player2.stop();
+                    player2.release();
+                    player2=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
 
             }
         });
@@ -201,6 +237,13 @@ public class TwoFragment extends Fragment {
                 }catch (NumberFormatException nfe){
                     exceptionText3.setVisibility(View.VISIBLE);
                 }
+
+                if (player3.isPlaying()){
+                    player3.stop();
+                    player3.release();
+                    player3=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
+                player3.start();
             }
         });
 
@@ -215,6 +258,12 @@ public class TwoFragment extends Fragment {
                 timerView3.setText("15:00");
 
                 exceptionText3.setVisibility(View.INVISIBLE);
+
+                if (player3.isPlaying()){
+                    player3.stop();
+                    player3.release();
+                    player3=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
             }
         });
 
@@ -258,6 +307,13 @@ public class TwoFragment extends Fragment {
                 }catch (NumberFormatException nfe){
                     exceptionText4.setVisibility(View.VISIBLE);
                 }
+
+                if (player4.isPlaying()){
+                    player4.stop();
+                    player4.release();
+                    player4=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
+                player4.start();
             }
         });
 
@@ -272,6 +328,12 @@ public class TwoFragment extends Fragment {
                 timerView4.setText("20:00");
 
                 exceptionText4.setVisibility(View.INVISIBLE);
+
+                if (player4.isPlaying()){
+                    player4.stop();
+                    player4.release();
+                    player4=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
             }
         });
 

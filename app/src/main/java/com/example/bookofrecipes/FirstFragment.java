@@ -1,11 +1,17 @@
 package com.example.bookofrecipes;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -17,6 +23,9 @@ import android.widget.TextView;
 
 
 public class FirstFragment extends Fragment {
+    MediaPlayer player;
+    Vibrator vibrator;
+
 
     private MyTimer timer;
 
@@ -35,6 +44,9 @@ public class FirstFragment extends Fragment {
         TextView timerView = (TextView) view.findViewById(R.id.textView8);
         EditText myTimeText = (EditText) view.findViewById(R.id.myTime);
         TextView exceptionText = (TextView) view.findViewById(R.id.exeText);
+
+        player = MediaPlayer.create(getContext(),R.raw.kolokol);
+        vibrator=(Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
         // Кнопка вернуться назад к списку рецептов
         backMain.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +81,21 @@ public class FirstFragment extends Fragment {
                      exceptionText.setVisibility(View.VISIBLE);
                  }
 
+                 if (player.isPlaying()){
+                     player.stop();
+                     player.release();
+                     player=MediaPlayer.create(getContext(),R.raw.kolokol);
+                 }
+                 player.start();
+
+                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                     long[] pattern = {0, 400, 100, 0};
+                     vibrator.vibrate(VibrationEffect.createWaveform(pattern, -1));
+                 }else {
+                     vibrator.vibrate(1000);
+                 }
+
+
              }
          });
 
@@ -84,6 +111,19 @@ public class FirstFragment extends Fragment {
                 timerView.setText("08:00");
 
                 exceptionText.setVisibility(View.INVISIBLE);
+
+                if (player.isPlaying()){
+                    player.stop();
+                    player.release();
+                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    long[] pattern = {0, 400, 100, 0};
+                    vibrator.vibrate(VibrationEffect.createWaveform(pattern, -1));
+                }else {
+                    vibrator.vibrate(1000);
+                }
             }
         });
 

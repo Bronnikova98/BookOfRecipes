@@ -2,6 +2,7 @@ package com.example.bookofrecipes;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,7 +19,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class ThreeFragment extends Fragment {
-
+    MediaPlayer player;
     private MyTimer timer;
 
     public ThreeFragment() {
@@ -31,12 +32,14 @@ public class ThreeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_three, container, false);
         Button backMain = (Button) view.findViewById(R.id.button13);
-        Button start1 = (Button) view.findViewById(R.id.button_start);
-        Button reset1 = (Button) view.findViewById(R.id.button12);
+        Button start = (Button) view.findViewById(R.id.button_start);
+        Button reset = (Button) view.findViewById(R.id.button12);
 
         TextView timerView1 = (TextView) view.findViewById(R.id.textView48);
         EditText myTimeText1 = (EditText) view.findViewById(R.id.textView49);
         TextView exceptionText1 = (TextView) view.findViewById(R.id.exetextView50);
+
+        player = MediaPlayer.create(getContext(),R.raw.kolokol);
 
         // Кнопка вернуться назад к списку рецептов
         backMain.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +54,7 @@ public class ThreeFragment extends Fragment {
             }
         });
 
-        start1.setOnClickListener(new View.OnClickListener() {
+        start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (timer != null) {
@@ -63,25 +66,38 @@ public class ThreeFragment extends Fragment {
                     int min = Integer.parseInt(arr[0]);
                     int sec = Integer.parseInt(arr[1]);
                     long mils = (min * 60 + sec) * 1000;
-                    timer=new MyTimer(mils,1000,getContext(),timerView1, start1);
+                    timer=new MyTimer(mils,1000,getContext(),timerView1, start);
                     timer.start();
                 }catch (NumberFormatException nfe){
                     exceptionText1.setVisibility(View.VISIBLE);
                 }
+
+                if (player.isPlaying()){
+                    player.stop();
+                    player.release();
+                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
+                player.start();
             }
         });
 
-        reset1.setOnClickListener(new View.OnClickListener() {
+        reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                start1.setText("Начать");
-                start1.getBackground().setColorFilter(Color.parseColor("#4CAF50"), PorterDuff.Mode.MULTIPLY);
+                start.setText("Начать");
+                start.getBackground().setColorFilter(Color.parseColor("#4CAF50"), PorterDuff.Mode.MULTIPLY);
                 timerView1.setTextColor(Color.parseColor("#4CAF50"));
                 if (timer != null){
                     timer.cancel();}
                 timerView1.setText("30:00");
 
                 exceptionText1.setVisibility(View.INVISIBLE);
+
+                if (player.isPlaying()){
+                    player.stop();
+                    player.release();
+                    player=MediaPlayer.create(getContext(),R.raw.kolokol);
+                }
             }
         });
 

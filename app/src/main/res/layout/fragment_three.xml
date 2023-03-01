@@ -52,7 +52,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
-                    android:text="Чтобы приготовить блины на молоке следуйте шагам ниже! Удачи!"
+                    android:text="@string/good_luck_pancakes_with_milk"
                     android:textColor="#000000" />
             </LinearLayout>
 
@@ -74,7 +74,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Молоко 1 стакан"
+                android:text="@string/pancakes_with_milk_ingredient_one"
                 android:textColor="#000000" />
 
             <TextView
@@ -84,7 +84,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Вода 1 стакан"
+                android:text="@string/pancakes_with_milk_ingredient_two"
                 android:textColor="#000000" />
 
             <TextView
@@ -94,7 +94,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Дрожжи сухие 6 гр."
+                android:text="@string/pancakes_with_milk_ingredient_three"
                 android:textColor="#000000" />
 
             <TextView
@@ -104,7 +104,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Масло растительное 3 ст.л."
+                android:text="@string/pancakes_with_milk_ingredient_four"
                 android:textColor="#000000" />
 
             <TextView
@@ -114,7 +114,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Яйца 2 шт."
+                android:text="@string/pancakes_with_milk_ingredient_five"
                 android:textColor="#000000" />
 
             <TextView
@@ -124,7 +124,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Мука 250 гр."
+                android:text="@string/pancakes_with_milk_ingredient_six"
                 android:textColor="#000000" />
 
             <TextView
@@ -134,7 +134,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Соль 1 щепотка"
+                android:text="@string/pancakes_with_milk_ingredient_seven"
                 android:textColor="#000000" />
 
             <TextView
@@ -144,7 +144,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Сахар 2 ст. ложки"
+                android:text="@string/pancakes_with_milk_ingredient_eight"
                 android:textColor="#000000" />
 
             <TextView
@@ -154,7 +154,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 1. Молоко с водой погреть до теплого. Перелить в миску, добавить яйца и дрожжи, перемешать"
+                android:text="@string/step_one_pancakes_with_milk"
                 android:textColor="#000000" />
 
             <TextView
@@ -164,7 +164,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 2. Добавить сахар и соль, тщательно перемешать"
+                android:text="@string/step_two_pancakes_with_milk"
                 android:textColor="#000000" />
 
             <TextView
@@ -174,7 +174,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 3, Добавить муку, протерев её через сито. Перемешать. Влить масло. Еще раз перемешать. Накрыть миску и убрать в теплое место на 60 мин "
+                android:text="@string/step_three_pancakes_with_milk"
                 android:textColor="#000000" />
 
             <TableLayout
@@ -252,7 +252,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 4. Приступаем к жарке. Раскаленную сковороду смазываем растительным маслом и наливаем тесто, распределяем его по сковороде. Как только края подрумянятся, переворачиваем блин и дожариваем другую сторону. Готовый блин выкладываем на тарелку, можно смазать сливочным маслом. Приятного аппетита! "
+                android:text="@string/step_four_pancakes_with_milk"
                 android:textColor="#000000" />
 
             <Button

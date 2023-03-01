@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Книга рецептов</string>
     <string name="OpenDrawer">Open nav drawer</string>
     <string name="CloseDrawer">Close nav drawer</string>
-    <string name="hello_blank_fragment">Привет пустой фрагмент</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="choose_a_recipe">Выберите рецепт</string>
     <string name="dumplings">Пельмени</string>
     <string name="borsch">Борщ</string>
@@ -28,10 +29,10 @@
     <string name="borsch_ingredient_six">Капуста 100 гр.</string>
     <string name="borsch_ingredient_seven">Картофель 400 гр.</string>
     <string name="borsch_ingredient_eight">Приправы (соль, перец, зелень) по вкусу</string>
-    <string name="step_one_borsch">Шаг 1.  Налейте в кастрюлю холодную воду, выложите в неё мясо, поставьте на стредний огонь. Когда вода закипит, снимите пену, добавьте соль. Накройте кастрюлю крышкой и варите 30 мин.</string>
-    <string name="step_two_borsch">Шаг 2. Почистите свёклу, морковь и лук. Свёклу и морковь натрите на крупной тёрке, лук порежте мелким кубиком. На сковороду налейте немного растительного масла. Обжарьте на сковороде свёклу, морковь и лук , помешивая, около 10 мин.</string>
-    <string name="step_three_borsch">Шаг 3. Почистите картофель, нарежте его кубиком. Нашинкуйте капусту. После приготовления бульона добавьте в кастрюлю картофель и капусту. Варите 15 мин.</string>
-    <string name="step_four_borsch">Шаг 4. Далее добавьте поджаренные свёклу, морковь и лук в кастрюлю. Варите до готовности около 20 мин.</string>
+    <string name="step_one_borsch">Шаг 1.  Налейте в кастрюлю холодную воду, выложите в неё мясо, поставьте на стредний огонь. Когда вода закипит, снимите пену, добавьте соль. Накройте кастрюлю крышкой и варите 30 мин</string>
+    <string name="step_two_borsch">Шаг 2. Почистите свёклу, морковь и лук. Свёклу и морковь натрите на крупной тёрке, лук порежте мелким кубиком. На сковороду налейте немного растительного масла. Обжарьте на сковороде свёклу, морковь и лук , помешивая, около 10 мин</string>
+    <string name="step_three_borsch">Шаг 3. Почистите картофель, нарежте его кубиком. Нашинкуйте капусту. После приготовления бульона добавьте в кастрюлю картофель и капусту. Варите 15 мин</string>
+    <string name="step_four_borsch">Шаг 4. Далее добавьте поджаренные свёклу, морковь и лук в кастрюлю. Варите до готовности около 20 мин</string>
     <string name="step_five_borsch">Шаг 5. Добавьте перец, зелень, при необходимости досолите. Приятного аппетита!</string>
     <string name="good_luck_pancakes_with_milk">Чтобы приготовить блины на молоке следуйте шагам ниже! Удачи!</string>
     <string name="pancakes_with_milk_ingredient_one">Молоко 1 стакан</string>
@@ -41,10 +42,10 @@
     <string name="pancakes_with_milk_ingredient_five">Яйца 2 шт.</string>
     <string name="pancakes_with_milk_ingredient_six">Мука 250 гр.</string>
     <string name="pancakes_with_milk_ingredient_seven">Соль 1 щепотка</string>
-    <string name="pancakes_with_milk_ingredient_eight">Сахар 2 ст. л.</string>
+    <string name="pancakes_with_milk_ingredient_eight">Сахар 2 ст. ложки</string>
     <string name="step_one_pancakes_with_milk">Шаг 1. Молоко с водой погреть до теплого. Перелить в миску, добавить яйца и дрожжи, перемешать</string>
     <string name="step_two_pancakes_with_milk">Шаг 2. Добавить сахар и соль, тщательно перемешать</string>
-    <string name="step_three_pancakes_with_milk">Шаг 3. Добавить муку, протерев её через сито. Перемешать. Влить масло. Еще раз перемешать. Накрыть миску и убрать в теплое место на 60 мин.</string>
+    <string name="step_three_pancakes_with_milk">Шаг 3. Добавить муку, протерев её через сито. Перемешать. Влить масло. Еще раз перемешать. Накрыть миску и убрать в теплое место на 60 мин</string>
     <string name="step_four_pancakes_with_milk">Шаг 4. Приступаем к жарке. Раскаленную сковороду смазываем растительным маслом и наливаем тесто, распределяем его по сковороде. Как только края подрумянятся, переворачиваем блин и дожариваем другую сторону. Готовый блин выкладываем на тарелку, можно смазать сливочным маслом. Приятного аппетита! </string>
     <string name="exe_text">Введите время в числовом формате хх:хх</string>
 </resources>

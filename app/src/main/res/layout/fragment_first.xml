@@ -201,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Введите время в числовом формате хх:хх"
+                android:text="@string/exe_text"
                 android:textColor="#5E0000"
                 android:visibility="invisible" />
 

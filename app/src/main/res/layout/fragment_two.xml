@@ -74,7 +74,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="@string/borscht_ingredient_one"
+                android:text="@string/borsch_ingredient_one"
                 android:textColor="#000000" />
 
             <TextView
@@ -84,7 +84,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Свинина на кости 1 кг."
+                android:text="@string/borsch_ingredient_two"
                 android:textColor="#000000" />
 
             <TextView
@@ -94,7 +94,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Свёкла 1 шт."
+                android:text="@string/borsch_ingredient_three"
                 android:textColor="#000000" />
 
             <TextView
@@ -104,7 +104,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Морковь 1 шт."
+                android:text="@string/borsch_ingredient_four"
                 android:textColor="#000000" />
 
             <TextView
@@ -114,7 +114,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Лук 1 шт."
+                android:text="@string/borsch_ingredient_five"
                 android:textColor="#000000" />
 
             <TextView
@@ -124,7 +124,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Капуста 100 гр."
+                android:text="@string/borsch_ingredient_six"
                 android:textColor="#000000" />
 
             <TextView
@@ -134,7 +134,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Картофель 400 гр."
+                android:text="@string/borsch_ingredient_seven"
                 android:textColor="#000000" />
 
             <TextView
@@ -144,7 +144,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#EAF5F6"
-                android:text="Приправы (соль, перец, зелень) по вкусу"
+                android:text="@string/borsch_ingredient_eight"
                 android:textColor="#000000" />
 
             <TextView
@@ -154,7 +154,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 1.  Налейте в кастрюлю холодную воду, выложите в неё мясо, поставьте на стредний огонь. Когда вода закипит, снимите пену, добавьте соль. Накройте кастрюлю крышкой и варите 30 мин"
+                android:text="@string/step_one_borsch"
                 android:textColor="#000000" />
 
             <TableLayout
@@ -222,7 +222,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Введите время в числовом формате хх:хх"
+                android:text="@string/exe_text"
                 android:textColor="#5E0000"
                 android:visibility="invisible" />
 
@@ -233,7 +233,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 2. Почистите свёклу, морковь и лук. Свёклу и морковь натрите на крупной тёрке, лук порежте мелким кубиком. На сковороду налейте немного растительного масла. Обжарьте на сковороде свёклу, морковь и лук , помешивая, около 10 мин"
+                android:text="@string/step_two_borsch"
                 android:textColor="#000000" />
 
             <TableLayout
@@ -300,7 +300,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Введите время в числовом формате хх:хх"
+                android:text="@string/exe_text"
                 android:textColor="#5E0000"
                 android:visibility="invisible" />
 
@@ -311,7 +311,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 3. Почистите картофель, нарежте его кубиком. Нашинкуйте капусту. После приготовления бульона добавьте в кастрюлю картофель и капусту. Варите 15 мин"
+                android:text="@string/step_three_borsch"
                 android:textColor="#000000" />
 
             <TableLayout
@@ -378,7 +378,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Введите время в числовом формате хх:хх"
+                android:text="@string/exe_text"
                 android:textColor="#5E0000"
                 android:visibility="invisible" />
 
@@ -389,7 +389,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 4. Далее добавьте поджаренные свёклу, морковь и лук в кастрюлю. Варите до готовности около 20 мин"
+                android:text="@string/step_four_borsch"
                 android:textColor="#000000" />
 
             <TableLayout
@@ -457,7 +457,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="Введите время в числовом формате хх:хх"
+                android:text="@string/exe_text"
                 android:textColor="#5E0000"
                 android:visibility="invisible" />
 
@@ -468,7 +468,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:text="Шаг 5. Добавьте перец, зелень, при необходимости досолите. Приятного аппетита!"
+                android:text="@string/step_five_borsch"
                 android:textColor="#000000" />
 
             <Button

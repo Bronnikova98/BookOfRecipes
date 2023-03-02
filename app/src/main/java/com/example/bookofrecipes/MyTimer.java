@@ -18,6 +18,8 @@ import android.widget.TextView;
 import androidx.core.app.NotificationCompat;
 
 public class MyTimer extends CountDownTimer {
+    //сколько осталось времени
+    private long milisecleft = 0;
     private Vibrator vibrator;
     private MediaPlayer player;
     private TextView timerView;
@@ -75,6 +77,11 @@ public class MyTimer extends CountDownTimer {
         int min = (int) Math.floor(sec/60);
         sec -= min * 60;
         timerView.setText(String.format("%02d:%02d", min,sec));
+        milisecleft = millisUntilFinished;
+    }
+
+    public long getMilisecleft() {
+        return milisecleft;
     }
 
     @Override

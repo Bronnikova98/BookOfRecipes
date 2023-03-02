@@ -6,6 +6,9 @@ import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -25,6 +28,10 @@ import android.widget.TextView;
 public class FirstFragment extends Fragment {
 
     private MyTimer timer;
+    private TextView timerView;
+    private Button start;
+    private MediaPlayer player;
+    private Vibrator vibrator;
 
     public FirstFragment() {
         // Required empty public constructor
@@ -35,16 +42,16 @@ public class FirstFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         Button backMain = (Button) view.findViewById(R.id.back);
-        Button start = (Button) view.findViewById(R.id.button4);
+        start = (Button) view.findViewById(R.id.button4);
         Button reset = (Button) view.findViewById(R.id.button5);
 
-        TextView timerView = (TextView) view.findViewById(R.id.textView8);
+        timerView = (TextView) view.findViewById(R.id.textView8);
         EditText myTimeText = (EditText) view.findViewById(R.id.myTime);
         TextView exceptionText = (TextView) view.findViewById(R.id.exeText);
 
-        MediaPlayer player = MediaPlayer.create(getContext(),R.raw.kolokol);
+        player = MediaPlayer.create(getContext(),R.raw.kolokol);
 
-        Vibrator vibrator=(Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator=(Vibrator)getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
         // Кнопка вернуться назад к списку рецептов
         backMain.setOnClickListener(new View.OnClickListener() {
@@ -135,9 +142,40 @@ public class FirstFragment extends Fragment {
             }
 
         });
+        //
+
 
         // Inflate the layout for this fragment
         return view;
     }
-
+public void ch(){
+        timerView.setText("cadasd");
 }
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+
+//        super.onActivityCreated(savedInstanceState);
+        if (savedInstanceState!=null) {
+            ch();
+            long time_save = savedInstanceState.getLong("time_save");
+            if (timer != null) {
+                timer.cancel();
+                timerView.setText("sad");
+            }
+
+            timer = new MyTimer(time_save, 1000, getContext(), timerView, start, player, vibrator);
+            timer.start();
+        }
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putLong("time_save", timer.getMilisecleft());
+
+
+    }
+
+        }

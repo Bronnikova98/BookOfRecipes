@@ -87,7 +87,7 @@ public class ThreeFragment extends Fragment {
                 timerView1.setTextColor(Color.parseColor("#4CAF50"));
                 if (timer != null){
                     timer.cancel();}
-                timerView1.setText("30:00");
+                timerView1.setText("60:00");
 
                 exceptionText1.setVisibility(View.INVISIBLE);
 

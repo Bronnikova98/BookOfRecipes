@@ -100,7 +100,7 @@ public class MyTimer extends CountDownTimer {
                         .setSmallIcon(R.drawable.timer)
                         .setContentTitle(context.getString(R.string.time_is_over))
                         .setChannelId(CHANEL)
-                        .setContentText("Пора переходить к следующему шагу")
+                        .setContentText(context.getString(R.string.time_to_move))
                         .setContentIntent(contentIntent)
                         .setPriority(NotificationCompat.PRIORITY_HIGH);
 

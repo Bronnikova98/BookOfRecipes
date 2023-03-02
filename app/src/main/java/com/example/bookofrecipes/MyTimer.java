@@ -98,7 +98,7 @@ public class MyTimer extends CountDownTimer {
                 PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANEL)
                         .setSmallIcon(R.drawable.timer)
-                        .setContentTitle("Время вышло")
+                        .setContentTitle(context.getString(R.string.time_is_over))
                         .setChannelId(CHANEL)
                         .setContentText("Пора переходить к следующему шагу")
                         .setContentIntent(contentIntent)

@@ -48,4 +48,6 @@
     <string name="step_three_pancakes_with_milk">Schritt 3. Mehl hinzufügen, indem du es durch das Sieb wischst. Rühren. Gießen Sie das Öl. Noch einmal mischen. Bedecke die Schüssel und entferne sie an einem warmen Ort für 60 Minuten</string>
     <string name="step_four_pancakes_with_milk">Schritt 4. Wir beginnen mit dem Braten. Die heiße Pfanne schmieren wir mit Pflanzenöl und gießen den Teig, verteilen ihn in der Pfanne. Sobald die Kanten schwingen, drehen wir den Pfannkuchen um und brennen die andere Seite. Der fertige Pfannkuchen wird auf den Teller gelegt, kann mit Butter geölt werden. Guten Appetit!</string>
     <string name="exe_text">Geben Sie die Zeit im Zahlenformat xx:xx ein.</string>
+    <string name="time_is_over">" Die Zeit ist um"</string>
+    <string name="time_to_move">Zeit, mit dem nächsten Schritt fortzufahren</string>
 </resources>

@@ -47,4 +47,6 @@
     <string name="step_three_pancakes_with_milk">Step 3. Add flour by wiping it through a sieve. Mix. Pour in the oil. Stir again. Cover the bowl and place in a warm place for 60 min.</string>
     <string name="step_four_pancakes_with_milk">Step 4. We start frying. Grease the hot pan with vegetable oil and pour the dough, distribute it over the pan. As soon as the edges brown, turn the pancake and cook the other side. Put the finished pancake on a plate, you can lubricate with butter. Enjoy your meal!</string>
     <string name="exe_text">Enter the time in numeric format xx:xx</string>
+    <string name="time_is_over">Time is over</string>
+    <string name="time_to_move">Time to move on to the next step</string>
 </resources>

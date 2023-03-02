@@ -50,4 +50,5 @@
     <string name="exe_text">Введите время в числовом формате хх:хх</string>
     <string name="time_is_over">Время вышло</string>
     <string name="time_to_move">Пора переходить к следующему шагу</string>
+    <string name="ready">Готово!</string>
 </resources>

@@ -49,4 +49,5 @@
     <string name="exe_text">Enter the time in numeric format xx:xx</string>
     <string name="time_is_over">Time is over</string>
     <string name="time_to_move">Time to move on to the next step</string>
+    <string name="ready">Ready!</string>
 </resources>

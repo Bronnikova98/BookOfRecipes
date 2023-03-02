@@ -89,7 +89,7 @@ public class MyTimer extends CountDownTimer {
 
         timerView.setText("00:00");
         timerView.setTextColor(Color.parseColor("#873939"));
-        start.setText("Готово!");
+        start.setText(context.getString(R.string.ready));
 
         handler.postDelayed(new Runnable() {
             @Override
